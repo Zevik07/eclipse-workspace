@@ -36,6 +36,10 @@ public class Diem {
 		y+=dy;
 		System.out.print("Da doi xong !!!");
 	}
+	public void xuatDiem()
+	{
+		System.out.print("("+x+","+y+")");
+	}
 	public String toString()
 	{
 		return("("+x+","+y+")");

@@ -9,7 +9,7 @@ public class SDDiem {
 		System.out.print("\nNhap toa do diem b");
 		b.nhapDiem();
 		Diem c = new Diem(-b.giaTriX(),-b.giatTriY());
-		System.out.printf("\nToa do diem C doi xung voi b la (%d,%d)",c.giaTriX(),c.giatTriY());
+		System.out.printf("Toa do diem C doi xung voi b la (%d,%d)",c.giaTriX(),c.giatTriY());
 		System.out.print("\nKhoang cach tu B den tam O la "+b.khoangCach());
 		System.out.print("\nKhoang cach tu A den B la "+b.khoangCach(a));
 	}

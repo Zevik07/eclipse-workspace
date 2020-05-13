@@ -4,11 +4,11 @@ import java.util.Scanner;
 import Buoi2.Date;
 
 public class SinhVien {
-	private final int MAX = 10;
+	private final int MAX = 20;
 	private String mssv, hten;
 	private Date ngSinh;
 	private int sluong;
-	private String [] tenHP, diem; //theo A, B+, B, …
+	private String [] tenHP, diem;
 	
 	public SinhVien(){
 		mssv = new String();
@@ -35,6 +35,18 @@ public class SinhVien {
 			diem[i]=new String(s.diem[i]);
 		}
 	}
+	public SinhVien(String mssv,String hten,Date ngSinh,int sluong, String []tenHP,String []diem)
+	{
+		this.mssv=new String(mssv);
+		this.sluong=sluong;
+		this.hten=new String(hten);
+		this.ngSinh=new Date(ngSinh);
+		for (int i=0;i<MAX;i++)
+		{
+			this.tenHP[i]=new String(tenHP[i]);
+			this.diem[i]=new String(diem[i]);
+		}
+	}
 	public String tensv()
 	{
 		return hten;
@@ -52,11 +64,11 @@ public class SinhVien {
 	public void nhapDiem(){
 		Scanner sc = new Scanner(System.in);
 		do{
-			System.out.print("\nNhap so luong mon hoc:");
+			System.out.print("Nhap so luong mon hoc:");
 			sluong = sc.nextInt();
 		}while (sluong > MAX);
 		
-		System.out.print("Nhap cac Mon hoc :");
+		System.out.print("--Nhap cac Mon hoc--\n");
 		
 		sc.nextLine();
 		
@@ -72,9 +84,9 @@ public class SinhVien {
 	public String toString(){
 		String s = mssv +","+ hten + "," + ngSinh.toString() + "[";
 		for(int i=0;i<sluong;i++){
-			s+= tenHP[i] + ":" + diem[i]+";s";
+			s+= tenHP[i] + ":" + diem[i]+";";
 		}
-		s+="]";
+		s+="] ";
 		return s;
 	}
 	
