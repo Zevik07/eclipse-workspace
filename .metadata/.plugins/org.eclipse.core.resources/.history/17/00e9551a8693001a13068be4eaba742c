@@ -1,0 +1,10 @@
+package Buoi3;
+
+public class testnham {
+	public static void main (String []args)
+	{
+		float a=2.5F;
+		int b=2;
+		if (a%b==0) System.out.print("1");
+	}
+}

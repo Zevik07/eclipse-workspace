@@ -1,0 +1,10 @@
+package Buoi1;
+import java.util.Scanner;
+public class Bai5 {
+	public static void bac1(int a, int b)
+	{
+		Scanner temp=new Scanner(System.in);
+		
+	}
+
+}

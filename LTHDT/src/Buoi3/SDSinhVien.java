@@ -1,11 +1,11 @@
 package Buoi3;
 
 import java.util.Scanner;
-
+import java.util.Arrays;
 public class SDSinhVien {
 	public static void main(String []args)
 	{
-//		SinhVien a= new SinhVien();
+//		SinhVien a= new SinhVien();s
 //		a.nhap();
 //		a.nhapDiem();
 //		a.dKy("LTHDT", "A+");
@@ -37,12 +37,14 @@ public class SDSinhVien {
 		{
 			for (int j=i;j<n;j++)
 			{
-				if (ds[i].tensv().compareTo(ds[j].tensv())>0)
+				if (ds[i].tensv().charAt(ds[i].tensv().lastIndexOf(' ')+1)>ds[j].tensv().charAt(ds[j].tensv().lastIndexOf(' ')+1))
 				{
-					System.out.print("a");
-					SinhVien tmp=ds[i];
-					ds[i]=ds[j];
-					ds[j]=tmp;
+//					SinhVien tmp=ds[i];
+//					ds[i]=ds[j];
+//					ds[j]=tmp;
+					SinhVien tmp=new SinhVien(ds[i]);
+					ds[i]=new SinhVien(ds[j]);
+					ds[j]=new SinhVien(tmp);
 				}
 			}
 		}

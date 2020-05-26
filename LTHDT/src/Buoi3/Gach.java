@@ -46,7 +46,7 @@ public class Gach {
 	}
 	public void xuatHopGach()
 	{
-		System.out.printf("\nMaso: "+maso+" Mau: "+mau+" Soluong: "+soluong+" Chieudai: "+chieudai+" Chieungang: "+chieungang+" Gia: "+gia);
+		System.out.print("\nMaso: "+maso+" Mau: "+mau+" Soluong: "+soluong+" Chieudai: "+chieudai+" Chieungang: "+chieungang+" Gia: "+gia);
 	}
 	public float giaBanLe() //?
 	{

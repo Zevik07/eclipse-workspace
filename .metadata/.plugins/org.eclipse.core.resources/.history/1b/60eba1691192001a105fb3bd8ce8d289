@@ -1,0 +1,43 @@
+package Buoi2;
+
+import java.util.Scanner;
+
+public class PhanSo {
+	private int tu;
+	private int mau;
+	private void Phanso()
+	{
+		tu=mau=1;
+	}
+	private void Phanso(int tu, int mau)
+	{
+		this.tu=tu;
+		this.mau=mau;
+	}
+	public void nhapPhanso()
+	{
+		Scanner temp=new Scanner(System.in);
+		tu=temp.nextInt();
+		mau=temp.nextInt();
+		while (mau==0) {
+			System.out.print("Mau bang 0, moi nhap lai !!!");
+			mau=temp.nextInt();
+		}
+		System.out.print("Nhap xong !!!");
+	}
+	public void hienthiPhanso()
+	{
+		if(tu==0 || mau==1) System.out.print("Phan so la: "+tu);
+		else
+		System.out.printf("Phan so la: %d/%d",tu,mau);
+	}
+	public void nghichDao()
+	{
+		if (tu==0) System.out.print("Tu bang 0, khong the nghich dao duoc");
+		else {
+			int temp=tu;
+			tu=mau'
+		}
+	}
+	
+}

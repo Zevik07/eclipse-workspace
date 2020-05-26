@@ -1,0 +1,97 @@
+package Buoi2;
+import java.util.Scanner;
+import java.util.InputMismatchException;
+public class Date {
+	private int Ngay;
+	private int Thang;
+	private int Nam;
+	Scanner temp=new Scanner(System.in);
+	public Date()
+	{
+		Ngay=Thang=Nam=0;
+	}
+	public Date(int Ngay,int Thang,int Nam)
+	{
+		this.Ngay=Ngay;
+		this.Thang=Thang;
+		this.Nam=Nam;
+	}
+	public void outPut()
+	{
+		System.out.println(Ngay+"/"+Thang+"/"+Nam);
+	}
+	public void inPut()
+	{
+		boolean check=true;
+		do {
+			
+			try {
+
+				System.out.println("Moi ban nhap ngay, thang va nam");
+				Ngay=temp.nextInt();
+				Thang=temp.nextInt();
+				Nam=temp.nextInt();
+				check=true;
+				if (!hopLe())
+				{
+					check=false;
+					System.out.print("Ban nhap sai ngay !!!");
+				}
+			}
+			catch (InputMismatchException e)
+			{
+				System.out.println("Loi, Ban nhap sai dinh dang !!!");
+				temp.nextLine();
+				check=false;
+			}
+		} while(check!=true);
+	}
+	public boolean namNhuan(int a)
+	{
+		if (a%4==0&&a%100!=0||a%400==0) return true;
+		else return false;
+	}
+	public boolean hopLe()
+	{
+		if (Ngay<1||Ngay>31||Thang<1||Thang>12||Nam<0) return false;
+		switch(Thang)
+		{
+		case 2:
+		{
+			if (!namNhuan(Nam)&&Ngay>28) return false;
+			else if(namNhuan(Nam)&&Ngay>29) return false;
+			else return true;
+		}
+		case 4: case 6: case 9: case 11:
+		{
+			if (Ngay>30) return false;
+			else return true;
+		}
+		default:
+		{
+			return true;
+		}
+		}
+	}
+	public Date ngayHomsau()
+	{
+		Date temp= new Date(Ngay,Thang,Nam);
+		if (namNhuan(Nam)&&Thang==2&&Ngay==29) temp=new Date(1,++Thang,Nam);
+		else {
+			int maxDay[]= {0,31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31};
+			++temp.Ngay;
+			if (temp.Ngay>maxDay[Thang]&&Thang==12) temp=new Date(1,1,Nam);
+			if (temp.Ngay>maxDay[Thang]) temp=new Date (1,++Thang,Nam);
+		}
+		return temp;
+	}
+	public Date congNgay(int n)
+	{ 
+		Date temp2=new Date(Ngay,Thang,Nam);
+		for (int i=0;i<n;++i)
+		{
+			temp2=temp2.ngayHomsau();
+		}
+		return temp2;
+	}
+}
