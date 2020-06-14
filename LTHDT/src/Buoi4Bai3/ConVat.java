@@ -26,19 +26,19 @@ public class ConVat {
 	}
 	public void Keu()
 	{
-		System.out.print("\nCho con vat keu: ");
+		//rerg
 	}
 	public void nhap()
 	{
 		
 		Scanner temp=new Scanner(System.in);
-		temp.nextLine();
+		System.out.print("Nhap giong, mau long, can nang: ");
 		giong=temp.nextLine();
 		maulong=temp.nextLine();
 		cannang=temp.nextInt();
 	}
 	public String toString()
 	{
-		return ("\nGiong: "+giong+"Mau long: "+maulong+"Can nang: "+cannang);
+		return ("\nGiong: "+giong+" Mau long: "+maulong+" Can nang: "+cannang);
 	}
 }
