@@ -5,10 +5,10 @@ public class SDDate {
 	{
 		Scanner temp=new Scanner(System.in);
 		Date test=new Date();
-		test.inPut();
+		test.nhap();
 		System.out.println("Ngay hom sau la: ");
-		test.ngayHomsau().outPut();
+		test.ngaySau().in();
 		System.out.println("Moi ban nhap so ngay muon cong them: ");
-		test.congNgay(temp.nextInt()).outPut();
+		test.congNgay(temp.nextInt()).in();
 	}
 }

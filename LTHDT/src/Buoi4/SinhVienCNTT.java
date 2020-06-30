@@ -1,7 +1,7 @@
 package Buoi4;
 import java.util.Scanner;
 
-import Buoi2.Date;
+import Buoi2.Date_old;
 import Buoi3.SinhVien;
 public class SinhVienCNTT extends SinhVien{
 	private String taikhoan,matkhau,email;
@@ -12,7 +12,7 @@ public class SinhVienCNTT extends SinhVien{
 		matkhau=new String ();
 		email=new String ();
 	}
-	public SinhVienCNTT(String mssv1, String ten1, Date ngaysinh1,int soluong1, String []tenhp1,String []diem1,String taikhoan1,String matkhau1,String email1)
+	public SinhVienCNTT(String mssv1, String ten1, Date_old ngaysinh1,int soluong1, String []tenhp1,String []diem1,String taikhoan1,String matkhau1,String email1)
 	{
 		super(mssv1,ten1,ngaysinh1,soluong1,tenhp1,diem1);
 		taikhoan=new String(taikhoan1);

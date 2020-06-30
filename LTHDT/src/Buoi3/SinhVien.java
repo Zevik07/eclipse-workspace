@@ -1,19 +1,19 @@
 package Buoi3;
 import java.util.Scanner;
 
-import Buoi2.Date;
+import Buoi2.Date_old;
 
 public class SinhVien {
 	private final int MAX = 20;
 	private String mssv, hten;
-	private Date ngSinh;
+	private Date_old ngSinh;
 	private int sluong;
 	private String [] tenHP, diem;
 	
 	public SinhVien(){
 		mssv = new String();
 		hten = new String();
-		ngSinh = new Date();
+		ngSinh = new Date_old();
 		sluong = 0;
 		tenHP=new String[MAX];
 		diem = new String[MAX];
@@ -26,7 +26,7 @@ public class SinhVien {
 	public SinhVien(SinhVien s){
 		mssv = new String(s.mssv);
 		hten = new String(s.hten);
-		ngSinh = new Date(s.ngSinh);
+		ngSinh = new Date_old(s.ngSinh);
 		sluong = s.sluong;
 		tenHP=new String[MAX];
 		diem = new String[MAX];
@@ -35,12 +35,12 @@ public class SinhVien {
 			diem[i]=new String(s.diem[i]);
 		}
 	}
-	public SinhVien(String mssv,String hten,Date ngSinh,int sluong, String []tenHP,String []diem)
+	public SinhVien(String mssv,String hten,Date_old ngSinh,int sluong, String []tenHP,String []diem)
 	{
 		this.mssv=new String(mssv);
 		this.sluong=sluong;
 		this.hten=new String(hten);
-		this.ngSinh=new Date(ngSinh);
+		this.ngSinh=new Date_old(ngSinh);
 		for (int i=0;i<MAX;i++)
 		{
 			this.tenHP[i]=new String(tenHP[i]);

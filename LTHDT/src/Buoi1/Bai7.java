@@ -14,7 +14,8 @@ public class Bai7 {
     public static void tachTen(String a)
     {
         int i=a.lastIndexOf(" ");
-        System.out.println("Ten la: "+a.substring(i));
+        int j=a.indexOf(" ");
+        System.out.println("Ten la: "+a.substring(j,i));
     }
     public static void main(String []args)
     {

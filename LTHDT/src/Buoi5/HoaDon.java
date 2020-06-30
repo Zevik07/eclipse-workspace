@@ -1,10 +1,10 @@
 package Buoi5;
 import java.util.Scanner;
 
-import Buoi2.Date;
+import Buoi2.Date_old;
 public class HoaDon {
 	private String id;
-	private Date Ngayxuat;
+	private Date_old Ngayxuat;
 	private int Soluonghang;
 	private String Tenhang[];
 	private int Soluongrieng[];
@@ -14,7 +14,7 @@ public class HoaDon {
 	public HoaDon()
 	{
 		id=new String();
-		Ngayxuat=new Date();
+		Ngayxuat=new Date_old();
 		Soluonghang=1;
 		for (int i=0;i<Soluonghang;i++)
 		{
